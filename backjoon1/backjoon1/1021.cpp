@@ -17,8 +17,8 @@ int main(void)
 	for (int i = 1; i <= size; i++)
 	{
 		dq.push_back(i);
-	}
-	int j = 0; // index_list ÀÎµ¦½º °íÁ¤
+	} 
+	int j = 0; // index_list ÀÎµ¦½º °íÁ¤dd
 	while (index_num--) {
 		for (int i = 0; i < dq.size(); i++) {
 			if (index_list[j] == dq.at(i)) {
