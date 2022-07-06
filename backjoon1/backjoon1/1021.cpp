@@ -20,13 +20,13 @@ int main(void)
 		dq.push_back(i); // 큐에 값 넣기 값들이 정해지지 않았으므로 1~ size만큼 넣어준다
 	}
 	for (int i = 0; i < user_num; i++) { // 찾고자하는 값의 인덱스 찾기
-		for (int j = 0; j < q_size; j++) {
+		for (int j = 0; j < dq.size(); j++) {
 			if (user_indexs[i] == dq.at(j)) { 
 				index = j; // 찾은 위치
 				break;
 			}
 		}
-		if (index > (q_size - index)) { // 오른쪽이동
+		if (index >= (dq.size() - index)) { // 오른쪽이동
 			while (1) {
 				if (dq.front() == user_indexs[i]) {
 					dq.pop_front();
