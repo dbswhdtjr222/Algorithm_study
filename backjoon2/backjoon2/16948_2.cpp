@@ -1,17 +1,17 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstring>
 #include <queue>
 
 #define MAX 201
 
 using namespace std;
-int bfs(int y, int x, int ey, int ex,int size);
+int bfs(int y, int x, int ey, int ex, int size);
 int main(void)
 {
-	int x, y, ex, ey; // Çà y ¿­ x
+	int x, y, ex, ey; // í–‰ ë ¬
 	int size;
 	cin >> size;
-	cin >> y>> x >> ey >> ex;
+	cin >> y >> x >> ey >> ex;
 
 	cout << bfs(y, x, ey, ex, size) << "\n";
 }
@@ -21,13 +21,13 @@ int bfs(int y, int x, int ey, int ex, int size)
 	queue<pair<int, int>> q;
 	int ny = 0, nx = 0;
 	int dist[MAX][MAX];
-	bool visited[MAX][MAX] = {0,}; // ¹æ¹® ±â·Ï
-	int dy[] = { -1,1,-2,2,-1,1 };
-	int dx[] = { -2,-2,0,0,2,2 };
-	
+	bool visited[MAX][MAX] = { 0, }; // Â¹Ã¦Â¹Â® Â±Ã¢Â·Ã
+	int dx[] = { -1,1,-2,2,-1,1 };
+	int dy[] = { -2,-2,0,0,2,2 };
+
 	memset(dist, -1, sizeof(dist));
 
-	q.push(make_pair(y, x)); // Çà ·Ä
+	q.push(make_pair(y, x)); // Ã‡Ã  Â·Ã„
 	visited[y][x] = true;
 	dist[y][x] = 0;
 
